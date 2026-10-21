@@ -1,0 +1,237 @@
+<!doctype html><html><head><meta charset=utf-8><meta name="robots" content="noindex"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Plancia di Dario</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&family=Source+Sans+Pro:wght@400;600;700&display=swap">
+<style>
+/* Layout: plancia di bordo. Testata (data | aggiornamento), striscia meteo a 6 colonne allineate come un giornale di bordo, news a schede. */
+:root {
+  --bg: #f3f6f7;
+  --surface: #ffffff;
+  --ink: #0f1d2b;
+  --muted: #566778;
+  --line: #d4dde3;
+  --accent: #c24a14;      /* arancio internazionale, boe e salvagenti */
+  --sea: #1f5f8b;         /* blu carta nautica */
+  --sun: #d99a1e;
+  --rain: #2f7fb8;
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --radius: 6px;
+}
+/* tema dariochinelli.com — token da claude/design-sito-dariochinelli.md (21/10/2026); solo tema chiaro, come il sito */
+:root {
+  color-scheme: light;
+  --bg: #fafafa; --surface: #ffffff; --ink: #222222; --muted: #595959; --line: #cccccc;
+  --accent: #0170E6; --sea: #1f5f8b; --sun: #b36b00; --rain: #26699c;
+  --font-display: "Raleway", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Source Sans Pro", Arial, sans-serif;
+  --font-data: "Source Sans Pro", Arial, sans-serif;
+  --radius: 10px;
+}
+.sec-title h2, .today .date { color: #1d1d1b; }
+.today .date { font-weight: 800; letter-spacing: 0; }
+.temps .tmax { font-weight: 700; }
+.body a:hover { color: #015ab8; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.45; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-block: 20px 28px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 22px; }
+
+/* Testata */
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px 24px; flex-wrap: wrap; border-bottom: 2px solid var(--ink); padding-bottom: 10px; }
+.today { min-width: 0; }
+.today .dow { font: 600 13px/1 var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.today .date { font-family: var(--font-display); font-stretch: 72%; font-weight: 800; font-size: clamp(28px, 5vw, 44px); line-height: 1; margin-top: 4px; letter-spacing: -.01em; }
+.stamp { text-align: right; font-family: var(--font-data); font-size: 13px; color: var(--muted); }
+.stamp b { display: block; font-weight: 500; color: var(--ink); font-size: 15px; font-variant-numeric: tabular-nums; }
+
+/* Meteo */
+.sec-title { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.sec-title h2 { margin: 0; font-family: var(--font-display); font-stretch: 85%; font-weight: 700; font-size: 18px; letter-spacing: .02em; text-transform: uppercase; }
+.sec-title small { color: var(--muted); font-size: 12px; font-family: var(--font-data); }
+.strip { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.day { display: flex; flex-direction: column; align-items: stretch; gap: 8px; padding: 14px 12px 14px; border-left: 1px solid var(--line); min-width: 0; text-align: center; }
+.day:first-child { border-left: 0; }
+.day .dname { font: 700 14px/1 var(--font-body); letter-spacing: .08em; text-transform: uppercase; }
+.day .dname span { color: var(--muted); font-weight: 500; letter-spacing: 0; font-family: var(--font-data); text-transform: none; margin-left: 4px; }
+.day .place { font-size: 12px; color: var(--muted); min-height: 2.6em; display: flex; align-items: center; justify-content: center; gap: 4px; line-height: 1.2; }
+.day .place .sea-tag { font: 500 10px/1 var(--font-data); color: var(--sea); border: 1px solid currentColor; border-radius: 3px; padding: 2px 3px; }
+.day svg.wx { width: 56px; height: 56px; align-self: center; }
+.cond { font-size: 12px; color: var(--muted); margin-top: -6px; }
+.temps { font-family: var(--font-data); font-variant-numeric: tabular-nums; font-size: 14px; }
+.temps .tmax { font-family: var(--font-display); font-stretch: 75%; font-weight: 700; font-size: 26px; color: var(--ink); }
+.temps .tmin { color: var(--muted); }
+.row { display: flex; justify-content: space-between; gap: 6px; font-size: 12px; border-top: 1px dashed var(--line); padding-top: 7px; text-align: left; }
+.row .k { color: var(--muted); text-transform: uppercase; letter-spacing: .06em; font-size: 10.5px; padding-top: 2px; }
+.row .v { font-family: var(--font-data); font-variant-numeric: tabular-nums; text-align: right; }
+.row .v.rain { color: var(--rain); }
+.wind { display: flex; align-items: center; justify-content: flex-end; gap: 6px; }
+.wind svg { width: 22px; height: 22px; flex: none; }
+.bf { display: inline-block; font: 500 10px/1 var(--font-data); background: var(--sea); color: var(--surface); border-radius: 3px; padding: 3px 4px; margin-left: 2px; }
+.note { font-size: 12px; color: var(--muted); margin: 0; }
+
+/* News */
+.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); overflow-x: auto; }
+.tab { appearance: none; border: 0; background: none; color: var(--muted); font: 600 14px/1 var(--font-body); letter-spacing: .06em; text-transform: uppercase; padding: 12px 14px 11px; border-bottom: 3px solid transparent; cursor: pointer; white-space: nowrap; }
+.tab:hover { color: var(--ink); }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+.tab:focus-visible, summary:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.list { list-style: none; margin: 0; padding: 0; }
+.item { border-bottom: 1px solid var(--line); }
+.item details { padding: 0; }
+.item summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; padding: 14px 4px; align-items: baseline; }
+.item summary::-webkit-details-marker { display: none; }
+.item .t { font-weight: 600; font-size: 16px; text-wrap: balance; min-width: 0; }
+.item .meta { font-family: var(--font-data); font-size: 12px; color: var(--muted); white-space: nowrap; display: flex; gap: 8px; align-items: center; }
+.lang { border: 1px solid var(--line); border-radius: 3px; padding: 1px 4px; font-size: 10.5px; }
+.item summary .chev { transition: transform .2s; display: inline-block; color: var(--accent); }
+.item details[open] .chev { transform: rotate(90deg); }
+.body { padding: 0 4px 16px; max-width: 68ch; }
+.body p { margin: 0 0 8px; }
+.body a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.body a:hover { text-decoration: underline; }
+.err { padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--muted); }
+
+@media (max-width: 880px) {
+  .strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .day:nth-child(3n+1) { border-left: 0; }
+  .day:nth-child(n+4) { border-top: 1px solid var(--line); }
+}
+@media (max-width: 520px) {
+  .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .day { border-left: 1px solid var(--line) !important; }
+  .day:nth-child(2n+1) { border-left: 0 !important; }
+  .day:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .stamp { text-align: left; }
+  .item summary { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { .item summary .chev { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header class="head">
+    <div class="today"><div class="dow" id="dow">&nbsp;</div><div class="date" id="date">&nbsp;</div></div>
+    <div class="stamp">Ultimo aggiornamento<b id="updated">—</b></div>
+  </header>
+
+  <section aria-labelledby="h-meteo" style="display:grid;gap:10px">
+    <div class="sec-title"><h2 id="h-meteo">Meteo · prossimi 6 giorni</h2><small id="msrc"></small></div>
+    <div class="strip" id="strip"></div>
+    <p class="note" id="mnote"></p>
+  </section>
+
+  <section aria-labelledby="h-news" style="display:grid;gap:4px">
+    <div class="sec-title"><h2 id="h-news">Notizie</h2></div>
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div id="panel" role="tabpanel"></div>
+  </section>
+</div>
+
+<script>
+(function () {
+  const TZ = "Europe/Rome";
+  const now = new Date();
+  document.getElementById("dow").textContent = now.toLocaleDateString("it-IT", { weekday: "long", timeZone: TZ });
+  document.getElementById("date").textContent = now.toLocaleDateString("it-IT", { day: "numeric", month: "long", year: "numeric", timeZone: TZ });
+
+  const CATS = [["vela", "Vela"], ["clima", "Clima"], ["italia", "Italia"], ["estero", "Estero"]];
+  const DIRS = ["N","NNE","NE","ENE","E","ESE","SE","SSE","S","SSO","SO","OSO","O","ONO","NO","NNO"];
+  const BF = [1,4,7,11,17,22,28,34,41,48,56,64];
+  const kn = ms => ms * 1.943844;
+  const beaufort = k => { let f = 0; while (f < BF.length && k >= BF[f]) f++; return f; };
+  const card = deg => DIRS[Math.round(((deg % 360) + 360) % 360 / 22.5) % 16];
+  const fmt1 = n => n.toLocaleString("it-IT", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  const pad = n => String(n).padStart(2, "0");
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  const LABEL = { clearsky: "Sereno", fair: "Poco nuvoloso", partlycloudy: "Parz. nuvoloso", cloudy: "Coperto", fog: "Nebbia",
+    lightrain: "Pioggia debole", rain: "Pioggia", heavyrain: "Pioggia forte", lightrainshowers: "Rovesci deboli", rainshowers: "Rovesci",
+    heavyrainshowers: "Rovesci forti", rainandthunder: "Temporale", rainshowersandthunder: "Temporale", heavyrainandthunder: "Temporale forte",
+    sleet: "Nevischio", snow: "Neve", lightsnow: "Neve debole" };
+  const sunSvg = (cx, cy, r) => `<circle cx="${cx}" cy="${cy}" r="${r}" fill="var(--sun)"/>` +
+    Array.from({ length: 8 }, (_, i) => { const a = i * Math.PI / 4, r1 = r + 3, r2 = r + 7;
+      return `<line x1="${cx + r1 * Math.cos(a)}" y1="${cy + r1 * Math.sin(a)}" x2="${cx + r2 * Math.cos(a)}" y2="${cy + r2 * Math.sin(a)}" stroke="var(--sun)" stroke-width="2.4" stroke-linecap="round"/>`; }).join("");
+  const cloudSvg = (dx, dy, s, fill) => `<path transform="translate(${dx} ${dy}) scale(${s})" d="M10 30h26a9 9 0 0 0 0-18 12 12 0 0 0-23-2A10 10 0 0 0 10 30z" fill="${fill}" stroke="var(--muted)" stroke-width="1.6"/>`;
+  function icon(sym) {
+    const b = (sym || "").replace(/_(day|night|polartwilight)$/, "");
+    let g = "";
+    if (b === "clearsky") g = sunSvg(28, 28, 10);
+    else if (b === "fair") g = sunSvg(22, 22, 8) + cloudSvg(14, 22, .9, "var(--surface)");
+    else if (b === "partlycloudy") g = sunSvg(20, 20, 8) + cloudSvg(8, 16, 1.1, "var(--surface)");
+    else if (b === "cloudy" || b === "fog") g = cloudSvg(4, 10, 1.15, "var(--line)") + (b === "fog" ? `<path d="M10 48h36M14 53h28" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>` : "");
+    else if (/thunder/.test(b)) g = cloudSvg(4, 4, 1.15, "var(--line)") + `<path d="M28 40l-5 9h6l-4 8" fill="none" stroke="var(--sun)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>`;
+    else if (/snow|sleet/.test(b)) g = cloudSvg(4, 4, 1.15, "var(--line)") + [18, 28, 38].map(x => `<circle cx="${x}" cy="49" r="2.4" fill="var(--sea)"/>`).join("");
+    else if (/rain/.test(b)) { const n = /heavy/.test(b) ? 4 : /light/.test(b) ? 2 : 3; g = cloudSvg(4, 4, 1.15, "var(--line)") + Array.from({ length: n }, (_, i) => { const x = 16 + i * (24 / Math.max(1, n - 1)); return `<line x1="${x}" y1="44" x2="${x - 3}" y2="53" stroke="var(--rain)" stroke-width="2.4" stroke-linecap="round"/>`; }).join(""); }
+    else g = cloudSvg(4, 10, 1.15, "var(--line)");
+    return `<svg class="wx" viewBox="0 0 56 56" aria-hidden="true">${g}</svg>`;
+  }
+  const arrow = from => `<svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="none" stroke="var(--line)"/><g transform="rotate(${(from + 180) % 360} 11 11)"><path d="M11 3l4 7h-3v9h-2v-9H7z" fill="var(--sea)"/></g></svg>`;
+
+  function renderMeteo(d) {
+    document.getElementById("msrc").textContent = d.meteo_source || "";
+    const strip = document.getElementById("strip");
+    strip.innerHTML = d.days.map(x => {
+      const dt = new Date(x.date + "T12:00:00Z");
+      const dn = dt.toLocaleDateString("it-IT", { weekday: "short", timeZone: TZ }).replace(".", "");
+      const dm = `${pad(dt.getUTCDate())}/${pad(dt.getUTCMonth() + 1)}`;
+      const base = (x.symbol || "").replace(/_(day|night|polartwilight)$/, "");
+      const rows = [];
+      if (x.precip_mm != null || x.precip_prob != null) rows.push(["Pioggia", `<span class="v rain">${x.precip_mm != null ? fmt1(x.precip_mm) + " mm" : ""}${x.precip_prob != null ? " · " + Math.round(x.precip_prob) + "%" : ""}</span>`]);
+      if (x.wind_ms != null) { const k = kn(x.wind_ms); rows.push(["Vento", `<span class="v wind">${arrow(x.wind_from)}${card(x.wind_from)} ${Math.round(k)} kn<span class="bf" title="Scala Beaufort">F${beaufort(k)}</span></span>`]); }
+      if (x.gust_ms != null) rows.push(["Raffiche", `<span class="v">${Math.round(kn(x.gust_ms))} kn</span>`]);
+      if (x.coastal && x.wave_m != null) rows.push(["Onda", `<span class="v">${fmt1(x.wave_m)} m${x.wave_period_s != null ? " · " + Math.round(x.wave_period_s) + " s" : ""}${x.wave_from != null ? " · " + card(x.wave_from) : ""}</span>`]);
+      if (x.pressure_hpa != null) rows.push(["Press.", `<span class="v">${Math.round(x.pressure_hpa)} hPa</span>`]);
+      if (x.uv != null) rows.push(["UV", `<span class="v">${Math.round(x.uv)}</span>`]);
+      if (x.sunrise && x.sunset) rows.push(["Sole", `<span class="v">${x.sunrise}–${x.sunset}</span>`]);
+      return `<article class="day" aria-label="${esc(dn + " " + dm + ", " + x.place)}">
+        <div class="dname">${esc(dn)}<span>${dm}</span></div>
+        <div class="place">${esc(x.place)}${x.coastal ? '<span class="sea-tag">MARE</span>' : ""}</div>
+        ${icon(x.symbol)}
+        <div class="cond">${esc(LABEL[base] || "")}</div>
+        <div class="temps"><span class="tmax">${Math.round(x.tmax)}°</span> <span class="tmin">/ ${Math.round(x.tmin)}°</span></div>
+        ${rows.map(r => `<div class="row"><span class="k">${r[0]}</span>${r[1]}</div>`).join("")}
+      </article>`;
+    }).join("");
+    const miss = (d.missing || []).filter(Boolean);
+    document.getElementById("mnote").textContent = "Località indicativa (città o zona). Vento medio massimo del giorno, direzione di provenienza." + (miss.length ? " Non disponibili in questo aggiornamento: " + miss.join(", ") + "." : "");
+  }
+
+  let NEWS = {}, current = "vela";
+  try { const s = localStorage.getItem("plancia-tab"); if (s && CATS.some(c => c[0] === s)) current = s; } catch (e) {}
+  function renderTabs() {
+    document.getElementById("tabs").innerHTML = CATS.map(([k, l]) =>
+      `<button class="tab" role="tab" id="tab-${k}" aria-selected="${k === current}" aria-controls="panel" tabindex="${k === current ? 0 : -1}" data-k="${k}">${l}</button>`).join("");
+    document.getElementById("panel").setAttribute("aria-labelledby", "tab-" + current);
+    const items = NEWS[current] || [];
+    document.getElementById("panel").innerHTML = items.length ? `<ul class="list">${items.map(n => {
+      const d = n.date ? n.date.split("-").reverse().slice(0, 2).join("/") : "";
+      return `<li class="item"><details><summary><span class="t"><span class="chev">›</span> ${esc(n.title)}</span>
+        <span class="meta"><span>${esc(n.source)}</span><span class="lang">${esc(n.lang || "")}</span><span>${d}</span></span></summary>
+        <div class="body"><p>${esc(n.summary)}</p><a href="${esc(n.url)}" target="_blank" rel="noopener">Leggi su ${esc(n.source)} ↗</a></div></details></li>`;
+    }).join("")}</ul>` : `<p class="note" style="padding:14px 4px">Nessuna notizia in questa sezione.</p>`;
+  }
+  document.getElementById("tabs").addEventListener("click", e => {
+    const b = e.target.closest(".tab"); if (!b) return;
+    current = b.dataset.k; try { localStorage.setItem("plancia-tab", current); } catch (err) {}
+    renderTabs(); document.getElementById("tab-" + current).focus();
+  });
+  document.getElementById("tabs").addEventListener("keydown", e => {
+    if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+    const i = CATS.findIndex(c => c[0] === current), j = (i + (e.key === "ArrowRight" ? 1 : CATS.length - 1)) % CATS.length;
+    current = CATS[j][0]; renderTabs(); document.getElementById("tab-" + current).focus();
+  });
+
+  fetch("data.json?t=" + Date.now(), { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(d => {
+    const u = new Date(d.updated);
+    const p = Object.fromEntries(new Intl.DateTimeFormat("it-IT", { timeZone: TZ, day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).formatToParts(u).map(x => [x.type, x.value]));
+    document.getElementById("updated").textContent = `${p.day}/${p.month}/${p.year} ${p.hour}:${p.minute}`;
+    renderMeteo(d); NEWS = d.news || {}; renderTabs();
+  }).catch(() => {
+    document.getElementById("strip").outerHTML = '<div class="err">Dati non caricati. Ricarica la pagina; i dati si aggiornano alle 06:47 e alle 18:47.</div>';
+    renderTabs();
+  });
+})();
+</script>
+
+</body></html>
