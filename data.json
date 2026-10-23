@@ -1,39 +1,270 @@
 {
-  "updated": "2026-10-21T17:20:00+02:00",
-  "meteo_source": "MET Norway · locationforecast 2.0",
-  "missing": ["raffiche", "probabilità pioggia", "UV", "onda"],
-  "days": [
-    {"date": "2026-10-22", "place": "Roma", "coastal": false, "symbol": "partlycloudy_day", "tmin": 12.7, "tmax": 20.4, "precip_mm": 0.0, "precip_prob": null, "wind_ms": 3.2, "wind_from": 268, "gust_ms": null, "pressure_hpa": 1017.5, "uv": null, "sunrise": "07:31", "sunset": "18:18", "wave_m": null, "wave_period_s": null, "wave_from": null},
-    {"date": "2026-10-23", "place": "Roma", "coastal": false, "symbol": "fair_day", "tmin": 9.9, "tmax": 20.3, "precip_mm": 2.4, "precip_prob": null, "wind_ms": 3.1, "wind_from": 27, "gust_ms": null, "pressure_hpa": 1021.0, "uv": null, "sunrise": "07:32", "sunset": "18:17", "wave_m": null, "wave_period_s": null, "wave_from": null},
-    {"date": "2026-10-24", "place": "Roma", "coastal": false, "symbol": "cloudy", "tmin": 14.2, "tmax": 19.6, "precip_mm": 4.4, "precip_prob": null, "wind_ms": 1.8, "wind_from": 116, "gust_ms": null, "pressure_hpa": 1016.2, "uv": null, "sunrise": "07:33", "sunset": "18:16", "wave_m": null, "wave_period_s": null, "wave_from": null},
-    {"date": "2026-10-25", "place": "Roma", "coastal": false, "symbol": "cloudy", "tmin": 10.2, "tmax": 17.4, "precip_mm": 0.0, "precip_prob": null, "wind_ms": 3.9, "wind_from": 13, "gust_ms": null, "pressure_hpa": 1015.1, "uv": null, "sunrise": "06:34", "sunset": "17:14", "wave_m": null, "wave_period_s": null, "wave_from": null},
-    {"date": "2026-10-26", "place": "Golfo del Tigullio", "coastal": true, "symbol": "clearsky_day", "tmin": 8.7, "tmax": 18.5, "precip_mm": 0.0, "precip_prob": null, "wind_ms": 2.0, "wind_from": 244, "gust_ms": null, "pressure_hpa": 1017.9, "uv": null, "sunrise": "06:52", "sunset": "17:21", "wave_m": null, "wave_period_s": null, "wave_from": null},
-    {"date": "2026-10-27", "place": "Roma", "coastal": false, "symbol": "clearsky_day", "tmin": 7.6, "tmax": 19.0, "precip_mm": 0.0, "precip_prob": null, "wind_ms": 3.3, "wind_from": 0, "gust_ms": null, "pressure_hpa": 1019.2, "uv": null, "sunrise": "06:37", "sunset": "17:11", "wave_m": null, "wave_period_s": null, "wave_from": null}
-  ],
-  "news": {
-    "vela": [
-      {"title": "SailGP apre a Pensacola la prima base fissa per gli F50", "summary": "Dal 19 ottobre SailGP ha una base di allenamento permanente presso l'High Performance Center di American Magic in Florida. L'accordo con American Magic dura fino al 2031; il primo F50 in loco è quello del team britannico.", "source": "Solovela.net", "lang": "IT", "date": "2026-10-21", "url": "https://www.solovela.net/notizie/3/sailgp-florida-prima-base-permanente-allenamento-f50-american-magic/1355257/"},
-      {"title": "Team Race RS 21: titolo italiano al Circolo Nautico Torre del Greco", "summary": "Tullio Formisano, con un equipaggio misto CN Torre del Greco e LNI Mandello del Lario, ha vinto il campionato italiano Team Race Open RS 21. Quattro giorni di regate in Sardegna, dal 15 al 18 ottobre, organizzate dallo Yacht Club Cala dei Sardi.", "source": "ANSA", "lang": "IT", "date": "2026-10-20", "url": "https://ansa.it/campania/notizie/2026/10/20/vela-titolo-italiano-per-atleta-del-circolo-nautico-torre-del_748a44ca-dee9-4338-a7b7-2d5b853b7b1b.html"},
-      {"title": "America's Cup: sette sfidanti contro la Nuova Zelanda", "summary": "Sono sette i team che puntano a strappare la Coppa ai neozelandesi, reduci da tre difese consecutive. L'articolo fa il punto sul lavoro di due sfidanti.", "source": "Sailing Scuttlebutt", "lang": "EN", "date": "2026-10-19", "url": "https://www.sailingscuttlebutt.com/2026/10/19/americas-cup-makes-strides-to-the-show/"},
-      {"title": "Yacht Racing Image 2026: scelte le 80 foto finaliste", "summary": "Il premio fotografico Pantaenius ha ricevuto 152 scatti da fotografi di 30 Paesi. La giuria ne ha selezionati 80, ora al voto del pubblico.", "source": "Sailing Scuttlebutt", "lang": "EN", "date": "2026-10-20", "url": "https://www.sailingscuttlebutt.com/2026/10/20/top-80-for-yacht-racing-image-2026/"}
-    ],
-    "clima": [
-      {"title": "UNEP: emissioni record nel 2025, rotta verso +2,6 °C", "summary": "Anche rispettando gli impegni attuali il riscaldamento arriverebbe a circa 2,6 °C a fine secolo, 2,8 °C con le sole politiche in vigore. Per rientrare sotto 1,5 °C servono tagli del 18% entro il 2030, 45% entro il 2035 e 69% entro il 2040 rispetto al 2025.", "source": "ANSA", "lang": "IT", "date": "2026-10-21", "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/21/report-onu-sul-clima-nel-2025-emissioni-record-verso-26c_18ee6503-2269-442c-9b2e-9d54ac67d003.html"},
-      {"title": "El Niño in rafforzamento: effetti già visibili nel mondo", "summary": "Il riscaldamento del Pacifico sta già spingendo eventi estremi: la peggiore stagione di incendi in Indonesia da decenni e un monsone indiano circa il 13% sotto la media. Gli esperti temono danni alle barriere coralline.", "source": "Quotidiano Nazionale", "lang": "IT", "date": "2026-10-21", "url": "https://www.quotidiano.net/esteri/super-el-nino-2026-d3b78968"},
-      {"title": "Accordo di Parigi: tre Paesi ignorano il comitato sugli NDC", "summary": "Oltre 30 Paesi non hanno ancora presentato il proprio contributo nazionale. Tre hanno respinto più volte i tentativi di contatto del comitato di conformità.", "source": "Climate Home News", "lang": "EN", "date": "2026-10-20", "url": "https://www.climatechangenews.com/2026/10/20/paris-agreement-committee-names-three-countries-snubbing-it-over-ndcs/"},
-      {"title": "IPCC: gli autori vanno avanti nonostante lo stallo politico", "summary": "I governi non hanno ancora concordato il calendario del prossimo ciclo di rapporti. Circa 120 autori si sono impegnati a completare la valutazione nei tempi e con pieni standard scientifici.", "source": "Climate Home News", "lang": "EN", "date": "2026-10-19", "url": "https://www.climatechangenews.com/2026/10/19/ipcc-scientists-vow-to-press-on-with-climate-reports-despite-political-deadlock/"}
-    ],
-    "italia": [
-      {"title": "Maltempo: allerta arancione in sei regioni, un morto a Jesolo", "summary": "Allerta arancione tra Liguria, Piemonte, Veneto, Friuli-Venezia Giulia, Lazio e Campania, gialla in altre quindici. Un uomo di 46 anni è morto per la caduta di un albero; oltre 370 interventi dei Vigili del Fuoco.", "source": "Fanpage", "lang": "IT", "date": "2026-10-21", "url": "https://www.fanpage.it/live/maltempo-diretta-allerta-meteo-notizie-21-ottobre-2026/"},
-      {"title": "Decreto sicurezza approvato, stralciati gli arresti da parte dell'esercito", "summary": "Il Quirinale ha bloccato la norma che avrebbe consentito ai militari di arrestare. Restano custodia cautelare per i minori e un nuovo reato di partecipazione violenta alle manifestazioni.", "source": "Sky TG24", "lang": "IT", "date": "2026-10-21", "url": "https://tg24.sky.it/cronaca/2026/10/21/prime-pagine-quotidiani-oggi-21-ottobre"},
-      {"title": "Autotrasportatori in protesta per il gasolio al Sud", "summary": "La protesta dei camionisti sul costo del carburante sta svuotando gli scaffali di alcuni supermercati del Mezzogiorno. Salvini ha promesso circa un miliardo di aiuti.", "source": "Sky TG24", "lang": "IT", "date": "2026-10-21", "url": "https://tg24.sky.it/cronaca/2026/10/21/prime-pagine-quotidiani-oggi-21-ottobre"},
-      {"title": "BTP Valore ottobre 2031: 10,2 miliardi dopo tre giorni", "summary": "Al terzo giorno di collocamento gli ordini hanno raggiunto circa 10,2 miliardi, 1,61 nella sola giornata. L'offerta, riservata al retail, chiude venerdì 23 ottobre alle 13 salvo chiusura anticipata.", "source": "SoldiOnline", "lang": "IT", "date": "2026-10-21", "url": "https://www.soldionline.it/notizie/obbligazioni-italia/btp-valore-ottobre-2031-settima-emissione-diretta"}
-    ],
-    "estero": [
-      {"title": "Witkoff da Putin con un nuovo piano per l'Ucraina", "summary": "L'inviato USA ha incontrato Putin a San Pietroburgo e presentato una proposta aggiornata per chiudere la guerra. Prima dell'incontro Mosca ha liberato il cittadino americano Stephen Hubbard.", "source": "Reuters", "lang": "EN", "date": "2026-10-21", "url": "https://www.reuters.com/world/europe/putin-hosts-trump-envoy-new-ukraine-peace-talks-frees-us-citizen-held-russia-2026-10-21/"},
-      {"title": "Ucraina: quattro morti negli attacchi russi alle centrali", "summary": "Raid notturni su impianti energetici nelle regioni di Kyiv, Volinia, Odessa e Mykolaiv. Due vittime a Kyiv e due vicino a Kharkiv.", "source": "Reuters", "lang": "EN", "date": "2026-10-21", "url": "https://www.reuters.com/world/europe/four-killed-russian-strikes-ukraine-prime-minister-says-2026-10-21/"},
-      {"title": "Iran: niente trattative con gli USA senza condizioni accolte", "summary": "Pezeshkian lo ha detto al capo dell'esercito pakistano Munir, mediatore. Il presidente del Parlamento Qalibaf lega la riapertura di Hormuz a sette condizioni.", "source": "Reuters", "lang": "EN", "date": "2026-10-20", "url": "https://www.reuters.com/world/asia-pacific/irans-pezeshkian-discusses-mediation-efforts-meeting-with-pakistans-army-chief-2026-10-20/"},
-      {"title": "Francia: truppe a supporto della polizia per le proteste di sabato", "summary": "Il premier Lecornu annuncia un grande dispositivo di sicurezza dopo le violenze dello scorso fine settimana. Macron promette di evitare nuovi disordini.", "source": "Reuters", "lang": "EN", "date": "2026-10-21", "url": "https://www.reuters.com/world/europe/french-government-faces-fresh-test-yellow-vests-mobilise-2026-10-21/"}
-    ]
+ "updated": "2026-10-23T10:12:00+02:00",
+ "meteo_source": "MET Norway · locationforecast 2.0",
+ "missing": [
+  "raffiche",
+  "probabilità pioggia",
+  "UV",
+  "onda"
+ ],
+ "days": [
+  {
+   "date": "2026-10-24",
+   "place": "Roma",
+   "coastal": false,
+   "symbol": "partlycloudy_day",
+   "tmin": 12.9,
+   "tmax": 19.1,
+   "precip_mm": 2.8,
+   "precip_prob": null,
+   "wind_ms": 4.8,
+   "wind_from": 0,
+   "gust_ms": null,
+   "pressure_hpa": 1017.2,
+   "uv": null,
+   "sunrise": "07:32",
+   "sunset": "18:17",
+   "wave_m": null,
+   "wave_period_s": null,
+   "wave_from": null
+  },
+  {
+   "date": "2026-10-25",
+   "place": "Roma",
+   "coastal": false,
+   "symbol": "cloudy",
+   "tmin": 9.4,
+   "tmax": 17.6,
+   "precip_mm": 0.0,
+   "precip_prob": null,
+   "wind_ms": 4.5,
+   "wind_from": 6,
+   "gust_ms": null,
+   "pressure_hpa": 1018.1,
+   "uv": null,
+   "sunrise": "06:33",
+   "sunset": "17:15",
+   "wave_m": null,
+   "wave_period_s": null,
+   "wave_from": null
+  },
+  {
+   "date": "2026-10-26",
+   "place": "Golfo del Tigullio",
+   "coastal": true,
+   "symbol": "partlycloudy_day",
+   "tmin": 12.5,
+   "tmax": 19.3,
+   "precip_mm": 0.0,
+   "precip_prob": null,
+   "wind_ms": 4.6,
+   "wind_from": 25,
+   "gust_ms": null,
+   "pressure_hpa": 1017.5,
+   "uv": null,
+   "sunrise": "06:50",
+   "sunset": "17:23",
+   "wave_m": null,
+   "wave_period_s": null,
+   "wave_from": null
+  },
+  {
+   "date": "2026-10-27",
+   "place": "Roma",
+   "coastal": false,
+   "symbol": "clearsky_day",
+   "tmin": 9.2,
+   "tmax": 19.5,
+   "precip_mm": 0.0,
+   "precip_prob": null,
+   "wind_ms": 2.1,
+   "wind_from": 36,
+   "gust_ms": null,
+   "pressure_hpa": 1020.6,
+   "uv": null,
+   "sunrise": "06:35",
+   "sunset": "17:13",
+   "wave_m": null,
+   "wave_period_s": null,
+   "wave_from": null
+  },
+  {
+   "date": "2026-10-28",
+   "place": "Roma",
+   "coastal": false,
+   "symbol": "clearsky_day",
+   "tmin": 9.6,
+   "tmax": 19.9,
+   "precip_mm": 0.0,
+   "precip_prob": null,
+   "wind_ms": 1.7,
+   "wind_from": 20,
+   "gust_ms": null,
+   "pressure_hpa": 1021.8,
+   "uv": null,
+   "sunrise": "06:36",
+   "sunset": "17:11",
+   "wave_m": null,
+   "wave_period_s": null,
+   "wave_from": null
+  },
+  {
+   "date": "2026-10-29",
+   "place": "Roma",
+   "coastal": false,
+   "symbol": "clearsky_day",
+   "tmin": 11.2,
+   "tmax": 20.3,
+   "precip_mm": 0.0,
+   "precip_prob": null,
+   "wind_ms": 2.0,
+   "wind_from": 35,
+   "gust_ms": null,
+   "pressure_hpa": 1023.1,
+   "uv": null,
+   "sunrise": "06:38",
+   "sunset": "17:10",
+   "wave_m": null,
+   "wave_period_s": null,
+   "wave_from": null
   }
+ ],
+ "news": {
+  "vela": [
+   {
+    "title": "Middle Sea Race 2026: vince Django 7X, Colombre primo in doppio",
+    "summary": "Il wallyrocket 71 Django 7X di Giovanni Lombardi Stronati si aggiudica la classifica IRC overall davanti a Balthasar e Daguet 5. Il JPK 1080 Colombre di Massimo Juris e Pietro Luciani vince IRC 6 e la categoria in doppio, secondo in ORC overall.",
+    "source": "Giornale della Vela",
+    "lang": "IT",
+    "date": "2026-10-21",
+    "url": "https://www.giornaledellavela.com/2026/10/21/classifiche-finali-middle-sea-race-2026/"
+   },
+   {
+    "title": "America's Cup: ARC Team USA rinforza l'equipaggio",
+    "summary": "Il challenger americano ingaggia Annie Haeger, olimpica a Rio 2016 nel 470, e Ben Rosenberg come velista AC75 e analista. Anderson Reggio diventa senior coach in vista delle regate preliminari di Napoli e della 38ª Coppa, in programma a luglio 2027.",
+    "source": "Sailing Scuttlebutt",
+    "lang": "EN",
+    "date": "2026-10-22",
+    "url": "https://www.sailingscuttlebutt.com/2026/10/22/arc-team-usa-strengthens-sailing-squad/"
+   },
+   {
+    "title": "Vele Storiche Viareggio: 40 barche e due sole prove",
+    "summary": "Il 21° raduno organizzato con il Club Nautico Versilia ha visto 40 barche in otto raggruppamenti, con vento leggero e due regate disputate. Margaret, centenaria del 1926, conquista più premi; a Kerkira II (1968, Sparkman & Stephens) va il Premio Eleganza.",
+    "source": "Giornale della Vela",
+    "lang": "IT",
+    "date": "2026-10-20",
+    "url": "https://www.giornaledellavela.com/2026/10/20/vele-storiche-viareggio-2026/"
+   },
+   {
+    "title": "Zaoli Sails, la veleria indipendente nata nel 1979",
+    "summary": "Fondata da Beppe e Rossana Zaoli, la veleria lavora a Marina degli Aregai su 2.500 m² con 26 persone, dalle derive olimpiche ai maxi. Ha fornito le vele alla goletta Atlantic nel 2025 ed equipaggia dal 2023 i dieci Figaro 3 del Nastro Rosa Tour.",
+    "source": "Giornale della Vela",
+    "lang": "IT",
+    "date": "2026-10-21",
+    "url": "https://www.giornaledellavela.com/2026/10/21/la-storica-veleria-zaoli-sails/"
+   }
+  ],
+  "clima": [
+   {
+    "title": "UNEP: per tornare a 1,5 °C servono tagli del 6% l'anno",
+    "summary": "L'Emissions Gap Report 2026 chiede riduzioni del 18% al 2030 e del 45% al 2035 rispetto al 2025, mentre i piani nazionali arrivano solo al 5-8% e all'11-15%. Le emissioni 2025 hanno toccato 58,4 Gt CO₂e e le politiche attuali portano verso 2,8 °C.",
+    "source": "Climate Home News",
+    "lang": "EN",
+    "date": "2026-10-21",
+    "url": "https://www.climatechangenews.com/2026/10/21/un-sets-steep-emission-cuts-to-reverse-1-5c-overshoot-by-end-of-century/"
+   },
+   {
+    "title": "Regno Unito: via libera al giacimento di gas Jackdaw",
+    "summary": "La ministra Miatta Fahnbulleh approva l'estrazione nel Mare del Nord, stimando 2,9 miliardi di sterline per l'economia, pur ammettendo un danno alla leadership climatica. Sul più grande giacimento Rosebank, con emissioni circa sette volte superiori, sarebbe orientata al no.",
+    "source": "Climate Home News",
+    "lang": "EN",
+    "date": "2026-10-21",
+    "url": "https://www.climatechangenews.com/2026/10/21/uk-approves-gas-drilling-despite-admitting-blow-to-climate-leadership-status/"
+   },
+   {
+    "title": "UK, il gas spiega quasi il 90% del rincaro delle bollette",
+    "summary": "Secondo un'analisi Nesta, i costi all'ingrosso del gas valgono 161 delle 180 sterline di aumento della bolletta elettrica tipica dal 2020. I contratti per le rinnovabili, invece, riducono oggi le bollette di 17 sterline l'anno.",
+    "source": "Carbon Brief",
+    "lang": "EN",
+    "date": "2026-10-21",
+    "url": "https://www.carbonbrief.org/revealed-expensive-gas-behind-nearly-90-of-rise-in-uk-electricity-bills"
+   },
+   {
+    "title": "Come gli scienziati del clima usano l'intelligenza artificiale",
+    "summary": "Dieci esperti spiegano che i modelli meteo basati su IA prevedono fino a due settimane con molto meno calcolo, ma rendono peggio sugli estremi da record. Tra i rischi citati: consumo energetico, risultati non verificati e tagli ai fondi per le osservazioni.",
+    "source": "Carbon Brief",
+    "lang": "EN",
+    "date": "2026-10-22",
+    "url": "https://www.carbonbrief.org/experts-how-are-climate-scientists-using-artificial-intelligence"
+   }
+  ],
+  "italia": [
+   {
+    "title": "Caro carburante, il governo stanzia 175 milioni",
+    "summary": "Il Consiglio dei ministri approva un decreto con 105 milioni per l'autotrasporto e fondi per agricoltura e pesca, e rinvia al 2027 la tassa sui piccoli pacchi. I blocchi dei tir proseguono in Campania e il Garante degli scioperi chiede la precettazione.",
+    "source": "ANSA",
+    "lang": "IT",
+    "date": "2026-10-22",
+    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/22/il-cdm-approva-il-decreto-sugli-aiuti-105-milioni-per-i-tir-e-70-per_416e7ef3-b46a-4594-90dd-671b4eb1cc0e.html"
+   },
+   {
+    "title": "Mozzarella di bufala, produzione ferma per i blocchi",
+    "summary": "Il latte non arriva ai caseifici: circa 1.500 allevamenti e quasi 100 impianti sono coinvolti, con perdite stimate in 3 milioni di euro al giorno. Il consorzio parla di uno stop mai avvenuto prima.",
+    "source": "Il Post",
+    "lang": "IT",
+    "date": "2026-10-22",
+    "url": "https://www.ilpost.it/2026/10/22/mozzarella-di-bufala-campana-dop-produzione-ferma/"
+   },
+   {
+    "title": "Nordio: ampliare le carceri minorili",
+    "summary": "I detenuti negli istituti per minorenni sono passati da 280 a 570 in quattro anni, a fronte di poco più di 600 posti in 19 strutture. Antigone e le opposizioni contestano: ad agosto il 68% dei ragazzi era senza condanna definitiva.",
+    "source": "ANSA",
+    "lang": "IT",
+    "date": "2026-10-22",
+    "url": "https://www.ansa.it/sito/notizie/politica/2026/10/22/nordio-ampliare-le-carceri-minorili.-in-4-anni-40-ragazzi-in-cella_8833a264-5004-485d-931e-6256bc03fd2a.html"
+   },
+   {
+    "title": "L'Umbria approva una legge sul suicidio assistito",
+    "summary": "È la quinta regione dopo Toscana, Sardegna, Emilia-Romagna e Veneto; la presidente Stefania Proietti non ha votato. La legge istituisce una commissione di valutazione di sei membri, mentre il governo ha già impugnato altre leggi regionali.",
+    "source": "Il Post",
+    "lang": "IT",
+    "date": "2026-10-22",
+    "url": "https://www.ilpost.it/2026/10/22/umbria-proposta-di-legge-suicidio-assistito-legge-regionale/"
+   }
+  ],
+  "estero": [
+   {
+    "title": "Terremoto di magnitudo 7 in Tibet, almeno 16 morti",
+    "summary": "La scossa ha colpito a 183 km da Nagqu a 10 km di profondità, con almeno 30 feriti. Centinaia di case sono crollate e il servizio ferroviario è stato sospeso.",
+    "source": "Il Post",
+    "lang": "IT",
+    "date": "2026-10-22",
+    "url": "https://www.ilpost.it/2026/10/22/terremoto-tibet-magnitudo-7/"
+   },
+   {
+    "title": "Venezuela, prima protesta nazionale da quasi due anni",
+    "summary": "Migliaia di persone hanno manifestato a Caracas, Valencia e Maracay su iniziativa di Vente Venezuela per chiedere elezioni libere. María Corina Machado chiede il voto entro luglio 2027; non c'è ancora una data.",
+    "source": "Al Jazeera",
+    "lang": "EN",
+    "date": "2026-10-23",
+    "url": "https://www.aljazeera.com/news/2026/10/23/venezuelans-demand-elections-in-first-national-protest-in-nearly-two-years"
+   },
+   {
+    "title": "Premio Sakharov alla Corte penale internazionale",
+    "summary": "L'UE assegna il suo principale riconoscimento per i diritti umani alla CPI, due settimane dopo le sanzioni annunciate da Trump contro la corte. Bruxelles valuta uno statuto di blocco per proteggerla.",
+    "source": "Al Jazeera",
+    "lang": "EN",
+    "date": "2026-10-22",
+    "url": "https://www.aljazeera.com/news/2026/10/22/us-sanctioned-icc-wins-sakharov-prize-eus-top-human-rights-award"
+   },
+   {
+    "title": "Francia, Macron vuole limitare le manifestazioni",
+    "summary": "Il presidente chiede ai prefetti di autorizzare solo cortei sindacali lontani dai centri città. Lione vieta tutte le proteste e il ministro Nuñez annuncia il 20% di agenti in più per sabato.",
+    "source": "Il Post",
+    "lang": "IT",
+    "date": "2026-10-22",
+    "url": "https://www.ilpost.it/2026/10/22/macron-vuole-limitare-il-piu-possibile-le-manifestazioni/"
+   }
+  ]
+ }
 }
